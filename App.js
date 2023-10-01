@@ -1,5 +1,6 @@
 import { StatusBar } from 'expo-status-bar';
 import { StyleSheet, Text, View, TextInput } from 'react-native';
+import * as Svg from 'react-native-svg';
 
 export default function App() {
   return (
@@ -37,9 +38,13 @@ fontSize: 20,
 color: 'gray'
 },
 TextInput: {
-  borderWidth: 1,
-  borderColor: 'gray',
-  width
+  padding: 10,
+  paddingStart: 25,
+  width: '80%',
+  height: 50,
+  marginTop: 35,
+  borderRadius: 30,
+  backgroundColor: '#fff',
 }
 
 });
