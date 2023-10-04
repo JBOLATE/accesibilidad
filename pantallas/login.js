@@ -1,14 +1,26 @@
 import { StatusBar } from 'expo-status-bar';
 import { StyleSheet, Text, View, TextInput } from 'react-native';
 import React from 'react';
-import Login from './pantallas/login';
 
-export default function App() {
+export default function Login() {
   return (
-    <Login />
+    <View style={styles.container}>
+      <Text style={styles.titulo}>FarmaNeuquen</Text>
+      <Text style={styles.subTitle}>Inicie sesión en su cuenta</Text>
+      <TextInput
+      placeholder='franco@gmail.com'
+      style={styles.TextInput}
+      />
+      <TextInput
+      placeholder='password'
+      style={styles.TextInput}
+      />
+      <StatusBar style="auto" />
+
+      <button/>
+    </View>
   );
 }
-
 
 const styles = StyleSheet.create({
   container: {
