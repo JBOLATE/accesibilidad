@@ -12,12 +12,12 @@ export default function Login() {
       style={styles.TextInput}
       />
       <TextInput
-      placeholder='password'
+      placeholder='passwordv'
       style={styles.TextInput}
       />
       <StatusBar style="auto" />
 
-      <button/>
+      
     </View>
   );
 }
