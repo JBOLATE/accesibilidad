@@ -15,10 +15,11 @@ export function Login() {
         style={styles.TextInput}
         textContentType='password'
       />
+      
       <TouchableOpacity onPress={()=> console.log("oprimido")}>
       <Text style={styles.forgotPassword}>Olvide mi contraseña</Text>
       </TouchableOpacity>
-
+      
       <TouchableOpacity onPress={()=> console.log("Oprimido")}>
       <Text style={styles.forgotPassword}>No tengo una cuenta</Text>
       </TouchableOpacity>
@@ -49,7 +50,16 @@ const styles = StyleSheet.create({
     marginTop: 35,
     borderRadius: 30,
     backgroundColor: '#fff',
-  }
-
-
+  },
+  
+  forgotPassword: {
+    height: 30,
+    marginTop: 25,
+    borderRadius: 10,
+    backgroundColor: '#bdb76b'
+    /*color: '#FFB677',
+    color: '#FF3CBD',
+   */
+  },
+  
 });

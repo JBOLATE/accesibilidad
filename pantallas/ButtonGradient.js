@@ -7,7 +7,7 @@ export function ButtonGradient () {
     return(
         <TouchableOpacity styles={styles.Container}>
             <LinearGradient
-                color={['#4c669f', '#3b5998', '#192f6a']}
+                color={['#FFB677', '#FF3CBD']}
                 start={{x: 1, y: 0,}}
                 end={{x: 0, y: 1,}}
                 styles={styles.Button}
@@ -25,7 +25,7 @@ const styles = StyleSheet.create({
     },
     Text: {
         fontSize: 20,
-        color: '#aqua',
+        color: '#fff',
     },
     Button: {
         width: '80%',
