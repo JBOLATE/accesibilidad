@@ -1,51 +1,55 @@
-import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View, TextInput } from 'react-native';
+import { StyleSheet, Text, View, TextInput, Touchable, TouchableOpacity } from 'react-native';
 import React from 'react';
 
-export default function Login() {
+export function Login() {
   return (
-    <View style={styles.container}>
-      <Text style={styles.titulo}>FarmaNeuquen</Text>
-      <Text style={styles.subTitle}>Inicie sesión en su cuenta</Text>
+    <View style={styles.Container}>
+      <Text style={styles.Titulo}>FarmaNeuquen</Text>
+      <Text style={styles.SubTitle}>Inicie sesión en su cuenta</Text>
       <TextInput
-      placeholder='franco@gmail.com'
-      style={styles.TextInput}
+        placeholder='franco@gmail.com'
+        style={styles.TextInput}
       />
       <TextInput
-      placeholder='passwordv'
-      style={styles.TextInput}
+        placeholder='Password'
+        style={styles.TextInput}
+        textContentType='password'
       />
-      <StatusBar style="auto" />
+      <TouchableOpacity onPress={()=> console.log("oprimido")}>
+      <Text style={styles.forgotPassword}>Olvide mi contraseña</Text>
+      </TouchableOpacity>
 
-      
-    </View>
+      <TouchableOpacity onPress={()=> console.log("Oprimido")}>
+      <Text style={styles.forgotPassword}>No tengo una cuenta</Text>
+      </TouchableOpacity>
+    </ View>
   );
 }
 
 const styles = StyleSheet.create({
-  container: {
+  Container: {
     flex: 1,
-    backgroundColor: 'aqua',
+    backgroundColor: '#003366',
     alignItems: 'center',
-    justifyContent: 'center', 
+    justifyContent: 'center',
   },
-titulo: {
-  fontSize: 30,
-  color: "#000",
-  fontWeight: 'bold'
-},
-subTitle: {
-fontSize: 20,
-color: 'gray'
-},
-TextInput: {
-  padding: 10,
-  paddingStart: 25,
-  width: '80%',
-  height: 50,
-  marginTop: 35,
-  borderRadius: 30,
-  backgroundColor: '#fff',
-}
+  Titulo: {
+    color: "#000",
+    fontWeight: 'bold',
+    fontSize: 40,
+  },
+  SubTitle: {
+    color: 'gray'
+  },
+  TextInput: {
+    padding: 10,
+    paddingStart: 25,
+    width: '80%',
+    height: 50,
+    marginTop: 35,
+    borderRadius: 30,
+    backgroundColor: '#fff',
+  }
+
 
 });
