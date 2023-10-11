@@ -6,10 +6,14 @@ export function Login() {
     <View style={styles.Container}>
       <Text style={styles.Titulo}>FarmaNeuquen</Text>
       <Text style={styles.SubTitle}>Inicie sesión en su cuenta</Text>
+
+      <Text style={styles.Usuario}>Usuario</Text>
       <TextInput
         placeholder='franco@gmail.com'
-        style={styles.TextInput}
+        style={styles.Mail}
       />
+
+      <Text style={styles.contraseña}>contraseña</Text>
       <TextInput
         placeholder='Password'
         style={styles.TextInput}
@@ -17,11 +21,15 @@ export function Login() {
       />
       
       <TouchableOpacity onPress={()=> console.log("oprimido")}>
-      <Text style={styles.forgotPassword}>Olvide mi contraseña</Text>
+      <Text style={styles.forgotPassword1}>Olvide mi contraseña</Text>
       </TouchableOpacity>
       
+      <TouchableOpacity style={styles.forgotPassword2} onPress={()=> console.log("Oprimido")}>
+      <Text style={{color:"#fff"}}>iniciar sesión</Text>
+      </TouchableOpacity>
+
       <TouchableOpacity onPress={()=> console.log("Oprimido")}>
-      <Text style={styles.forgotPassword}>No tengo una cuenta</Text>
+      <Text style={styles.forgotPassword3}>No tengo una cuenta</Text>
       </TouchableOpacity>
     </ View>
   );
@@ -30,7 +38,7 @@ export function Login() {
 const styles = StyleSheet.create({
   Container: {
     flex: 1,
-    backgroundColor: '#003366',
+    backgroundColor: '#fff',
     alignItems: 'center',
     justifyContent: 'center',
   },
@@ -42,6 +50,17 @@ const styles = StyleSheet.create({
   SubTitle: {
     color: 'gray'
   },
+
+  Mail: {
+    padding: 10,
+    paddingStart: 25,
+    width: '80%',
+    height: 50,
+    marginTop: 35,
+    borderRadius: 30,
+    backgroundColor: '#f5f5f5',
+  },
+
   TextInput: {
     padding: 10,
     paddingStart: 25,
@@ -49,17 +68,35 @@ const styles = StyleSheet.create({
     height: 50,
     marginTop: 35,
     borderRadius: 30,
-    backgroundColor: '#fff',
+    backgroundColor: '#f5f5f5',
   },
   
-  forgotPassword: {
+  Usuario: {
+    color: 'gray',
+    marginLeft: -190,
+  },
+
+  contraseña: {
+    color: 'gray',
+    marginLeft: -170,
+    
+  },
+
+  forgotPassword1: {
     height: 30,
-    marginTop: 25,
-    borderRadius: 10,
-    backgroundColor: '#bdb76b'
-    /*color: '#FFB677',
-    color: '#FF3CBD',
-   */
+    marginLeft: -120,
+    color: 'gray',
   },
   
+  forgotPassword2: {
+    height: 30,
+    backgroundColor: 'gray',
+    padding: 20,
+    marginTop: 35,
+    borderRadius: 30,
+  },
+  
+  forgotPassword3: {
+    color: 'gray',
+  }
 });
