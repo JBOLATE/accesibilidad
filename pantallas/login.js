@@ -16,7 +16,7 @@ export function Login() {
       <TextInput
         placeholder='Password'
         style={styles.TextInput}
-        textContentType='password'
+        secureTextEntry={true}  
       />
       
       <TouchableOpacity onPress={()=> console.log("oprimido")}>
@@ -24,7 +24,7 @@ export function Login() {
       </TouchableOpacity>
       
       <TouchableOpacity style={styles.forgotPassword2} onPress={()=> console.log("Oprimido")}>
-      <Text style={style.forgotPassword3}>iniciar sesión</Text>
+      <Text style={styles.ButtonText}>iniciar sesión</Text>
       </TouchableOpacity>
 
       <TouchableOpacity onPress={()=> console.log("Oprimido")}>
@@ -94,7 +94,7 @@ const styles = StyleSheet.create({
     color: 'gray',
   },
 
-  Color: {
-    color: 'black',
+  ButtonText: {
+    color: 'black'
   },
 });
