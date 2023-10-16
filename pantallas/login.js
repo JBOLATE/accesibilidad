@@ -4,8 +4,7 @@ import React from 'react';
 export function Login() {
   return (
     <View style={styles.Container}>
-      <Text style={styles.Titulo}>FarmaNeuquen</Text>
-      <Text style={styles.SubTitle}>Inicie sesión en su cuenta</Text>
+      <Text style={styles.Titulo}>Farma Neuquen</Text>
 
       <Text style={styles.Usuario}>Usuario</Text>
       <TextInput
@@ -25,7 +24,7 @@ export function Login() {
       </TouchableOpacity>
       
       <TouchableOpacity style={styles.forgotPassword2} onPress={()=> console.log("Oprimido")}>
-      <Text style={{color:"#fff"}}>iniciar sesión</Text>
+      <Text style={style.forgotPassword3}>iniciar sesión</Text>
       </TouchableOpacity>
 
       <TouchableOpacity onPress={()=> console.log("Oprimido")}>
@@ -47,26 +46,19 @@ const styles = StyleSheet.create({
     fontWeight: 'bold',
     fontSize: 40,
   },
-  SubTitle: {
-    color: 'gray'
-  },
 
   Mail: {
     padding: 10,
     paddingStart: 25,
     width: '80%',
-    height: 50,
-    marginTop: 35,
     borderRadius: 30,
     backgroundColor: '#f5f5f5',
   },
-
+  
   TextInput: {
     padding: 10,
     paddingStart: 25,
     width: '80%',
-    height: 50,
-    marginTop: 35,
     borderRadius: 30,
     backgroundColor: '#f5f5f5',
   },
@@ -74,23 +66,25 @@ const styles = StyleSheet.create({
   Usuario: {
     color: 'gray',
     marginLeft: -190,
+    marginTop: 35,
   },
 
   contraseña: {
     color: 'gray',
     marginLeft: -170,
-    
+    marginTop: 35,
   },
 
   forgotPassword1: {
     height: 30,
+    marginTop: 7,
     marginLeft: -120,
     color: 'gray',
   },
   
   forgotPassword2: {
     height: 30,
-    backgroundColor: 'gray',
+    backgroundColor: '#f5f5f5',
     padding: 20,
     marginTop: 35,
     borderRadius: 30,
@@ -98,5 +92,9 @@ const styles = StyleSheet.create({
   
   forgotPassword3: {
     color: 'gray',
-  }
+  },
+
+  Color: {
+    color: 'black',
+  },
 });
