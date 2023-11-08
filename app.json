@@ -4,10 +4,10 @@
     "slug": "farmaneuquen",
     "version": "1.0.0",
     "orientation": "portrait",
-    "icon": "./assets/farmaNeuquen.png",
+    "icon": "./assets/FarmaNeuquen.png",
     "userInterfaceStyle": "light",
     "splash2": {
-      "image": "./assets/splash2.png",
+      "image": "./assets/Splash2.png",
       "resizeMode": "contain",
       "backgroundColor": "#000000"
     },

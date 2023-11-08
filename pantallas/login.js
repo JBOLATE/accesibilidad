@@ -1,10 +1,12 @@
-import { StyleSheet, Text, View, TextInput, Touchable, TouchableOpacity } from 'react-native';
+import { StyleSheet, Text, View, TextInput, Touchable, TouchableOpacity, Image } from 'react-native';
 import React from 'react';
 
 export function Login() {
   return (
+    
     <View style={styles.Container}>
-      <Text style={styles.Titulo}>Farma Neuquen</Text>
+      
+      { <Text style={styles.Titulo}>Farma Neuquen</Text> }
 
       <Text style={styles.Usuario}>Usuario</Text>
       <TextInput
@@ -16,19 +18,22 @@ export function Login() {
       <TextInput
         placeholder='Password'
         style={styles.TextInput}
-        secureTextEntry={true}  
+        secureTextEntry={true}
       />
-      
-      <TouchableOpacity onPress={()=> console.log("oprimido")}>
-      <Text style={styles.forgotPassword1}>Olvide mi contraseña</Text>
-      </TouchableOpacity>
-      
-      <TouchableOpacity style={styles.forgotPassword2} onPress={()=> console.log("Oprimido")}>
-      <Text style={styles.ButtonText}>iniciar sesión</Text>
+
+      <TouchableOpacity onPress={() => console.log("oprimido")}>
+        <Text style={styles.forgotPassword1}>Olvide mi contraseña</Text>
       </TouchableOpacity>
 
-      <TouchableOpacity onPress={()=> console.log("Oprimido")}>
-      <Text style={styles.forgotPassword3}>No tengo una cuenta</Text>
+
+
+
+      <TouchableOpacity style={styles.prueba} onPress={() => console.log("Oprimido")}>
+        <Text style={styles.ButtonText}>iniciar sesión</Text>
+      </TouchableOpacity>
+
+      <TouchableOpacity onPress={() => console.log("Oprimido")}>
+        <Text style={styles.forgotPassword3}>No tengo una cuenta</Text>
       </TouchableOpacity>
     </ View>
   );
@@ -54,7 +59,7 @@ const styles = StyleSheet.create({
     borderRadius: 30,
     backgroundColor: '#f5f5f5',
   },
-  
+
   TextInput: {
     padding: 10,
     paddingStart: 25,
@@ -62,7 +67,7 @@ const styles = StyleSheet.create({
     borderRadius: 30,
     backgroundColor: '#f5f5f5',
   },
-  
+
   Usuario: {
     color: 'gray',
     marginLeft: -190,
@@ -81,7 +86,9 @@ const styles = StyleSheet.create({
     marginLeft: -120,
     color: 'gray',
   },
-  
+
+  prueba: {},
+
   forgotPassword2: {
     height: 30,
     backgroundColor: '#f5f5f5',
@@ -89,12 +96,17 @@ const styles = StyleSheet.create({
     marginTop: 35,
     borderRadius: 30,
   },
-  
+
   forgotPassword3: {
     color: 'gray',
   },
 
   ButtonText: {
-    color: 'black'
+    height: 30,
+    backgroundColor: '#f5f5f5',
+    padding: 20,
+    marginTop: 35,
+    borderRadius: 30,
+
   },
 });
