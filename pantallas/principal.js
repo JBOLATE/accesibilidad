@@ -7,7 +7,7 @@ export function Principal() {
             <Text>Farma Neuquen</Text>
 
             <TouchableOpacity onPress={() => console.log("oprimido")}>
-                <Text style={styles.forgotPassword1}>Olvide mi contraseña</Text>
+                <Text style={styles.forgotPassword1}>foto 1</Text>
             </TouchableOpacity>
 
 
