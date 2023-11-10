@@ -1,4 +1,4 @@
-import { StyleSheet, Text, View, TextInput, Touchable, TouchableOpacity, Image } from 'react-native';
+import { StyleSheet, Text, View, TextInput, Touchable, TouchableOpacity } from 'react-native';
 import React from 'react';
 
 export function Login() {
