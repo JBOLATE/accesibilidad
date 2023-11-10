@@ -87,8 +87,6 @@ const styles = StyleSheet.create({
     color: 'gray',
   },
 
-  prueba: {},
-
   forgotPassword2: {
     height: 30,
     backgroundColor: '#f5f5f5',
@@ -107,6 +105,5 @@ const styles = StyleSheet.create({
     padding: 20,
     marginTop: 35,
     borderRadius: 30,
-
   },
 });
