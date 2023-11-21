@@ -8,6 +8,6 @@ import {Registro} from './Pantallas/Registro';
 
 export default function App() {
   return(
-    <Registro />
+    <Login />
   );
 }
