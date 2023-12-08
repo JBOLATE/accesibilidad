@@ -1,18 +1,31 @@
-import { StyleSheet, Text, View, TextInput, Touchable, TouchableOpacity } from 'react-native';
-import React from 'react';
+import { StyleSheet, Text, View, TextInput, Touchable, TouchableOpacity, Button, Alert } from 'react-native';
+import React, { useState } from 'react';
+import { NavigationContainer } from '@react-navigation/native';
+import { useNavigation } from '@react-navigation/native';
 
+export default function Login() {
+  const navigator = useNavigation();
+  const [usuario, setUsuario] = useState("");
+  const [password, setPassword] = useState("");
 
-export function Login() {
+  function iniciarSesion() {
+    console.log(usuario)
+    if (usuario != "" && password != "") {
+      navigator.navigate("Principal")
+    } else {
+      alert("La cuenta no existe")
+    }
+  }
+
   return (
-
     <View style={styles.Container}>
-      
-      { <Text style={styles.Titulo}>Farma Neuquen</Text> }
+      {<Text style={styles.Titulo}>Farma Neuquen</Text>}
 
       <Text style={styles.Usuario}>Usuario</Text>
       <TextInput
         placeholder='franco@gmail.com'
         style={styles.Mail}
+        onChangeText={e => setUsuario(e)}
       />
 
       <Text style={styles.contraseña}>contraseña</Text>
@@ -20,20 +33,21 @@ export function Login() {
         placeholder='Password'
         style={styles.TextInput}
         secureTextEntry={true}
+        onChangeText={e => setPassword(e)}
       />
 
       <TouchableOpacity onPress={() => console.log("oprimido")}>
         <Text style={styles.forgotPassword1}>Olvide mi contraseña</Text>
       </TouchableOpacity>
 
+      <Button
+        onPress={() => iniciarSesion()}
+        title="Iniciar Sesion"
+        color="#f5f5f5"
+        style={styles.iniciarSesion}
+      />
 
-
-
-      <TouchableOpacity style={styles.prueba} onPress={() => console.log("Oprimido")}>
-        <Text style={styles.ButtonText}>iniciar sesión</Text>
-      </TouchableOpacity>
-
-      <TouchableOpacity onPress={() => console.log("Oprimido")}>
+      <TouchableOpacity title='no cuenta' onPress={() => navigator.navigate("Registro")}>
         <Text style={styles.forgotPassword3}>No tengo una cuenta</Text>
       </TouchableOpacity>
     </ View>
@@ -100,11 +114,4 @@ const styles = StyleSheet.create({
     color: 'gray',
   },
 
-  ButtonText: {
-    height: 30,
-    backgroundColor: '#f5f5f5',
-    padding: 20,
-    marginTop: 35,
-    borderRadius: 30,
-  },
 });

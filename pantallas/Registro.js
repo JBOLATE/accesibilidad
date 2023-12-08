@@ -1,10 +1,14 @@
-import { StyleSheet, Text, View, TextInput, Touchable, TouchableOpacity } from 'react-native';
+import { StyleSheet, Text, View, TextInput, Touchable, TouchableOpacity, Button } from 'react-native';
 import React from 'react';
+import { useNavigation } from '@react-navigation/native';
 
-export function Registro() {
+export default function Registro() {
+
+    const navigator = useNavigation();
+    
+
     return (
         <View  style={styles.Container}>
-            <Text style={styles.volver}>volver</Text>
             
             <Text style={styles.titulo}>FARMA NEUQUEN</Text>
 
@@ -47,10 +51,6 @@ export function Registro() {
             />
 
             
-            <TouchableOpacity style={styles.prueba} onPress={() => console.log("Oprimido")}>
-            <Text style={styles.ButtonText}>Crear</Text>
-            </TouchableOpacity>
-
         </View>
     );
 }
@@ -113,13 +113,6 @@ const styles = StyleSheet.create({
     backgroundColor: '#f5f5f5',
     },
 
-    prueba:{
-            height: 30,
-            backgroundColor: '#f5f5f5',
-            padding: 20,
-            marginTop: 35,
-            borderRadius: 30,
-        
-    },    
+     
 
 });

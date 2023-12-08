@@ -10,8 +10,6 @@ export function Principal() {
                 <Text style={styles.forgotPassword1}>foto 1</Text>
             </TouchableOpacity>
 
-
-
         </View>
     );
 }
