@@ -9,14 +9,14 @@ export default function Login() {
   const [password, setPassword] = useState("");
 
   function iniciarSesion() {
-    console.log(usuario)
+    console.log(usuario) 
     if (usuario != "" && password != "") {
       navigator.navigate("Principal")
     } else {
       alert("La cuenta no existe")
     }
   }
-
+  
   return (
     <View style={styles.Container}>
       {<Text style={styles.Titulo}>Farma Neuquen</Text>}

@@ -1,6 +1,7 @@
 import { StyleSheet, Text, View, TextInput, Touchable, TouchableOpacity } from 'react-native';
 import React from 'react';
 
+
 export function Principal() {
     return (
         <View  style={styles.Container}>

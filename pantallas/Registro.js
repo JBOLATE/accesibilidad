@@ -5,7 +5,6 @@ import { useNavigation } from '@react-navigation/native';
 export default function Registro() {
 
     const navigator = useNavigation();
-    
 
     return (
         <View  style={styles.Container}>
@@ -50,7 +49,11 @@ export default function Registro() {
                 secureTextEntry={true}
             />
 
-            
+            <Button
+                title="Crear"
+                color="#f5f5f5"
+                style={styles.Crear}
+            />
         </View>
     );
 }
