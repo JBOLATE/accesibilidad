@@ -50,7 +50,8 @@ export default function Registro() {
             />
 
             <Button
-                title="Crear"
+                onPress={() => navigator.navigate("Principal")}
+                title="crear"
                 color="#f5f5f5"
                 style={styles.Crear}
             />
